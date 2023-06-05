@@ -1,0 +1,20 @@
+# Mais informacoes em:
+# https://aka.ms/vs/httpfile
+# https://devblogs.microsoft.com/visualstudio/web-api-development-in-visual-studio-2022/
+
+@user = "usr01_apis"
+@password = "Usr01ApiValido01!"
+
+# @name autenticar
+POST https://localhost:7204/Login
+Content-Type: application/json
+
+{
+  "userID": {{user}},
+  "password": {{password}}
+}
+
+###
+
+GET https://localhost:7204/Contador
+Authorization: Bearer VALUE_TOKEN
